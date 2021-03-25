@@ -17,9 +17,17 @@
         <i class="fas fa-chevron-circle-left" @click="prevImg()"></i>
         <div class="images">
           <img v-bind:src="images[imageIndex]"  alt="">
+          <input class="add_img" type="text" v-model="inputValue" @keyup.enter="addImg()" name="" value="" placeholder="Inserisci l'URL dell'imagine che vuoi inserire.">
+          <button @click="addImg()" class="add" type="button" name="button">Aggiungi</button>
+          <button @click="delImg" class="remove" type="button" name="button">Elimina</button>
         </div>
         <i class="fas fa-chevron-circle-right" @click="nextImg()"></i>
+        <div class="dots">
+          <i class="far fa-circle" v-for="(image, index) in images" :class="(index == imageIndex) ? 'active' : '' "></i>
+        </div>
+
       </div>
+
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

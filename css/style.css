@@ -12,6 +12,7 @@
 }
 .carousel{
   display: flex;
+  position: relative;
   align-items: center;
   width: 50%;
   height: 500px;
@@ -20,6 +21,7 @@
 .images{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .images img {
   width: 100%;
@@ -31,4 +33,52 @@
   font-size: 35px;
   margin: 10px;
   cursor: pointer;
+}
+.dots{
+  position: absolute;
+  padding: 0 10px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.dots i{
+  color: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.active{
+  background-color: #fff;
+}
+.add_img{
+  text-align: center;
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid blue;
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  margin: auto;
+}
+.images button {
+  cursor: pointer;
+  position: absolute;
+  bottom: -40px;
+  background-color: #73abfe;
+  padding: 7px;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+.add{
+  right: 115px;
+}
+.remove{
+  right: 30px;
 }

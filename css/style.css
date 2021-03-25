@@ -1,0 +1,34 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-carousel{
+  display: flex;
+  height: 100vh;
+  background-color: #C9F4FF;
+  align-items: center;
+}
+.carousel{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 500px;
+  margin: auto;
+}
+.images{
+  width: 100%;
+  height: 100%;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.carousel i{
+  font-size: 35px;
+  margin: 10px;
+  cursor: pointer;
+}

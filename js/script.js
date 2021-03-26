@@ -14,6 +14,14 @@ var app = new Vue(
     },
     mounted: function () {
       this.autoplay = setInterval(this.nextImg, 1500); // Autoplay
+      const keyPress = this; // Assegno this(app) a una const
+      window.addEventListener('keydown', function (e) {
+        if ( e.which == 39) {
+          keyPress.clickNextImg();
+        } else if ( e.which == 37) {
+          keyPress.clickPrevImg();
+        }
+      })
     },
     methods: {
       nextImg: function () {

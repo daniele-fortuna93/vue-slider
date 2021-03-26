@@ -14,14 +14,14 @@
   <body>
     <div id="root" class="container-carousel">
       <div class="carousel">
-        <i class="fas fa-chevron-circle-left" @click="prevImg()"></i>
+        <i class="fas fa-chevron-circle-left" @click="clickPrevImg"></i>
         <div class="images">
           <img v-bind:src="images[imageIndex]"  alt="">
           <input class="add_img" type="text" v-model="inputValue" @keyup.enter="addImg()" name="" value="" placeholder="Inserisci l'URL dell'imagine che vuoi inserire.">
           <button @click="addImg()" class="add" type="button" name="button">Aggiungi</button>
           <button @click="delImg" class="remove" type="button" name="button">Elimina</button>
         </div>
-        <i class="fas fa-chevron-circle-right" @click="nextImg()"></i>
+        <i class="fas fa-chevron-circle-right" @click="clickNextImg"></i>
         <div class="dots">
           <i class="far fa-circle" v-for="(image, index) in images" :class="(index == imageIndex) ? 'active' : '' "></i>
         </div>

@@ -9,7 +9,11 @@ var app = new Vue(
         'img/8.jpg'
       ],
       imageIndex: 0,
-      inputValue: ''
+      inputValue: '',
+      autoplay: null
+    },
+    mounted: function () {
+      this.autoplay = setInterval(this.nextImg, 1500); // Autoplay
     },
     methods: {
       nextImg: function () {
@@ -39,7 +43,14 @@ var app = new Vue(
         } else {
           alert('Non puoi rimuovere altre immagini');
         }
-
+      },
+      clickNextImg: function () {
+        this.nextImg();
+        clearInterval(this.autoplay);
+      },
+      clickPrevImg: function () {
+        this.prevImg();
+        clearInterval(this.autoplay);
       }
     }
   }
